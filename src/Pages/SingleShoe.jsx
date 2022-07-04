@@ -7,12 +7,14 @@ const SingleShoe = () => {
   const {id}=useParams()
   const[data,setdata]=useState({})
   
+  
 
  useEffect(()=>{
- const temp= shoes.find(shoe=>shoe.id==id)
+ const temp= shoes.find(shoe=>shoe.id===Number(id))
+ 
  setdata(temp)
 
-  },[id])
+  },[id,shoes])
   return (
     <div>
       <h2>{data?.name}</h2>

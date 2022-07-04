@@ -7,6 +7,7 @@ const Filter = () => {
 
  const  [searchParams,setSearchParams] = useSearchParams()
  const  [data,setdata]=useState([])
+console.log(searchParams);
 
  const handlechange=(e)=>{
 
@@ -24,7 +25,7 @@ const Filter = () => {
 
 useEffect(()=>{
  setSearchParams({category:data})
-},[data])
+},[data,setSearchParams])
  
   return (
     <div>
