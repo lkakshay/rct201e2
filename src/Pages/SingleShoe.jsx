@@ -14,7 +14,7 @@ const SingleShoe = () => {
  
  setdata(temp)
 
-  },[id,shoes])
+  },[id,shoes ])
   return (
     <div>
       <h2>{data?.name}</h2>
